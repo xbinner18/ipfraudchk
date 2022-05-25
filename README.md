@@ -1,0 +1,2 @@
+# ipfraudchk
+CHK FRAUD SCORE OF IP API IN FLASK
