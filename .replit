@@ -1,0 +1,2 @@
+language = "python3"
+run = "pip install --upgrade pip && pip3 install -r requirements.txt && python3 -m app"
