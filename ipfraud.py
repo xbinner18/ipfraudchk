@@ -9,13 +9,13 @@ def database(ip):
         soup = bs(r, features="html.parser")
         score = soup.find('div', class_="score").get_text().strip("Fraud Score:")
         risk = soup.find('div', class_="panel_title high_risk").get_text()
-        k = soup.findAll('td')
+        # k = soup.findAll('td')
         
         data = {}
         data["ip"] = ip
         data["score"] = score
         data["risk"] = risk
-        data["host"] = k[0].get_text()
+        """data["host"] = k[0].get_text()
         data["asn"] = k[1].get_text()
         data["isp"] = k[2].get_text()
         data["org"] = k[3].get_text()
@@ -32,7 +32,7 @@ def database(ip):
         data["server"] = k[17].get_text()
         data["pproxy"] = k[18].get_text()
         data["wproxy"] = k[19].get_text()
-        data["robot"] = k[20].get_text()
+        data["robot"] = k[20].get_text()"""
         return data
     except Exception as e:
         return {"status":False,"error":e}
